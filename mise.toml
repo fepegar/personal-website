@@ -6,8 +6,17 @@ description = "Start Flask dev server"
 run = "uv run flask --app main run --debug"
 
 [tasks.fetch-pubs]
-description = "Fetch publications from Semantic Scholar"
+description = "Fetch publications from Google Scholar"
 run = "uv run python scripts/fetch_publications.py"
+
+[tasks.update-pubs]
+description = "Fetch publications and push to GitHub"
+depends = ["fetch-pubs"]
+run = """
+git add data/publications.json
+git commit -m "Update publications data" || echo "No changes to commit"
+git push
+"""
 
 [tasks.generate-cv-data]
 description = "Generate cv/data.typ from Python content"

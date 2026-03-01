@@ -29,10 +29,6 @@ jobs:
       - name: Install Python dependencies
         run: uv sync
 
-      - name: Fetch publications
-        run: mise run fetch-pubs
-        continue-on-error: true
-
       - name: Generate CV data
         run: mise run generate-cv-data
 
