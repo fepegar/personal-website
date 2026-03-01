@@ -3,10 +3,14 @@
 
 #show: cv-setup
 
+#set page(margin: (x: 1.6cm, y: 1.4cm))
+#set text(size: 9.5pt)
+#set par(leading: 0.55em)
+
 #cv-header()
 
 #section("Profile")
-#cv-profile-long
+#cv-profile-short
 
 #section("Experience")
 #for exp in experience {
@@ -20,11 +24,9 @@
 
 #section("Education")
 #for edu in education {
-  let bullets = edu.bullets.map(b => [- #b]).join()
   entry(
     [*#edu.degree* — _#edu.institution _],
     [_#edu.dates _],
-    description: if edu.bullets.len() > 0 { bullets },
   )
 }
 
@@ -36,6 +38,7 @@
 #languages
 
 #section("Selected Publications")
+#set text(size: 9pt)
 #for pub in selected-publications {
   let year-str = if pub.year != none [#pub.year] else []
   [- #pub.authors. *#pub.title.* _#pub.venue _ #year-str.]
