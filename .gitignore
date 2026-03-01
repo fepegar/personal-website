@@ -9,8 +9,5 @@ wheels/
 # Virtual environments
 .venv
 
-# Data
-data/
-
 # Built CV PDFs
 static/cv/

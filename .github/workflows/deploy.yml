@@ -31,6 +31,10 @@ jobs:
 
       - name: Fetch publications
         run: mise run fetch-pubs
+        continue-on-error: true
+
+      - name: Generate CV data
+        run: mise run generate-cv-data
 
       - name: Build CVs
         run: mise run build-cv

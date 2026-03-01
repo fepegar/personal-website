@@ -15,7 +15,7 @@ run = "uv run python scripts/generate_cv_data.py"
 
 [tasks.build-cv]
 description = "Compile Typst CVs to PDF"
-depends = ["fetch-pubs", "generate-cv-data"]
+depends = ["generate-cv-data"]
 run = """
 mkdir -p static/cv
 typst compile cv/cv-short.typ static/cv/cv-short.pdf
