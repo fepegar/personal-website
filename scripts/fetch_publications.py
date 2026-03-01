@@ -49,6 +49,16 @@ def clean_abstract(text: str) -> str:
     return text
 
 
+def format_authors(raw: str) -> str:
+    """Convert 'A and B and C' to 'A, B, and C'."""
+    authors = [a.strip() for a in raw.split(" and ") if a.strip()]
+    if len(authors) <= 1:
+        return raw
+    if len(authors) == 2:
+        return f"{authors[0]} and {authors[1]}"
+    return ", ".join(authors[:-1]) + ", and " + authors[-1]
+
+
 def fetch_all_papers() -> list[dict]:
     """Fetch all papers from Google Scholar."""
     logger.info("Fetching author profile %s from Google Scholar", AUTHOR_ID)
@@ -71,7 +81,7 @@ def fetch_all_papers() -> list[dict]:
             "year": int(bib.get("pub_year", 0)) if bib.get("pub_year") else None,
             "venue": bib.get("venue", "") or bib.get("journal", "") or bib.get("conference", ""),
             "citationCount": filled.get("num_citations", 0),
-            "authors": bib.get("author", ""),
+            "authors": format_authors(bib.get("author", "")),
             "url": filled.get("pub_url", ""),
             "scholarUrl": filled.get("author_pub_id", ""),
         })
