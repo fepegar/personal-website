@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Fernando Pérez-García{% endblock %}
+
+{% block content %}
+<div class="about-header">
+    <img src="{{ personal.avatar_url }}" alt="{{ personal.name }}" class="avatar">
+    <div class="about-info">
+        <h1>{{ personal.name }} <span class="pronouns">({{ personal.pronouns }})</span></h1>
+        <p class="about-subtitle">{{ personal.title }}<br><a href="{{ personal.affiliation_url }}">{{ personal.affiliation }}</a> · {{ personal.location }}</p>
+        <div class="keywords">
+            {% for kw in personal.keywords %}
+            <span class="keyword-tag">{{ kw }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="bio">
+    {% for paragraph in bio.split('\n\n') %}
+    <p>{{ paragraph | safe }}</p>
+    {% endfor %}
+</div>
+
+<div class="social-links">
+    {% for link in social_links %}
+    {% if link.name != "Email" %}
+    <a href="{{ link.url }}" class="social-link" target="_blank" rel="noopener" title="{{ link.name }}"><i class="{{ link.icon_class }}"></i> {{ link.name }}</a>
+    {% endif %}
+    {% endfor %}
+    <a href="#" class="social-link" id="email-link" title="Email"><i class="fa-solid fa-envelope"></i> Email</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function() {
+    var u = 'fepegar', d = 'gmail.com';
+    var a = document.getElementById('email-link');
+    a.href = 'mail' + 'to:' + u + '@' + d;
+})();
+</script>
+{% endblock %}

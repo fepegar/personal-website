@@ -1,0 +1,31 @@
+[tools]
+typst = "latest"
+
+[tasks.serve]
+description = "Start Flask dev server"
+run = "uv run flask --app main run --debug"
+
+[tasks.fetch-pubs]
+description = "Fetch publications from Semantic Scholar"
+run = "uv run python scripts/fetch_publications.py"
+
+[tasks.generate-cv-data]
+description = "Generate cv/data.typ from Python content"
+run = "uv run python scripts/generate_cv_data.py"
+
+[tasks.build-cv]
+description = "Compile Typst CVs to PDF"
+depends = ["fetch-pubs", "generate-cv-data"]
+run = """
+mkdir -p static/cv
+typst compile cv/cv-short.typ static/cv/cv-short.pdf
+typst compile cv/cv-long.typ static/cv/cv-long.pdf
+"""
+
+[tasks.freeze]
+description = "Export static site with Frozen-Flask"
+run = "uv run python freeze.py"
+
+[tasks.build]
+description = "Full build pipeline"
+depends = ["build-cv", "freeze"]

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}CV – Fernando Pérez-García{% endblock %}
+
+{% block content %}
+<h2>Curriculum Vitae</h2>
+
+<div class="cv-downloads">
+    <a href="{{ url_for('static', filename='cv/cv-short.pdf') }}" class="cv-download-btn">📄 Short CV (1 page)</a>
+    <a href="{{ url_for('static', filename='cv/cv-long.pdf') }}" class="cv-download-btn">📄 Full CV</a>
+</div>
+
+<div class="cv-section">
+    <h2>Experience</h2>
+    {% for entry in experience %}
+    <div class="cv-entry">
+        <div class="cv-entry-header">
+            <span class="cv-entry-title">{{ entry.title }}</span>
+            <span class="cv-entry-dates">{{ entry.start }} – {{ entry.end }}</span>
+        </div>
+        {% if entry.organization %}
+        <div class="cv-entry-org">{{ entry.organization }}{% if entry.location %} · {{ entry.location }}{% endif %}</div>
+        {% endif %}
+        {% if entry.bullets %}
+        <ul class="cv-entry-items">
+            {% for item in entry.bullets %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="cv-section">
+    <h2>Education</h2>
+    {% for entry in education %}
+    <div class="cv-entry">
+        <div class="cv-entry-header">
+            <span class="cv-entry-title">{{ entry.degree }}</span>
+            <span class="cv-entry-dates">{{ entry.start }} – {{ entry.end }}</span>
+        </div>
+        <div class="cv-entry-org">{{ entry.institution }}{% if entry.location %} · {{ entry.location }}{% endif %}</div>
+        {% if entry.bullets %}
+        <ul class="cv-entry-items">
+            {% for item in entry.bullets %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="cv-section">
+    <h2>Technical Skills</h2>
+    {% for category, skills in technical_skills.items() %}
+    <p><strong>{{ category }}:</strong> {{ skills }}</p>
+    {% endfor %}
+</div>
+
+<div class="cv-section">
+    <h2>Languages</h2>
+    <p>{{ languages }}</p>
+</div>
+{% endblock %}

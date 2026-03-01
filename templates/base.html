@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Fernando Pérez-García{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="{{ url_for('home') }}" class="nav-name">Fernando Pérez-García</a>
+            <button class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}" {% if request.path == '/' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ url_for('news') }}" {% if '/news' in request.path %}class="active"{% endif %}>News</a></li>
+                <li class="nav-dropdown">
+                    <a href="{{ url_for('publications_selected') }}" {% if '/publications' in request.path %}class="active"{% endif %}>Publications</a>
+                    <div class="nav-dropdown-content">
+                        <a href="{{ url_for('publications_selected') }}">Selected</a>
+                        <a href="{{ url_for('publications_all') }}">All</a>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('cv') }}" {% if '/cv' in request.path %}class="active"{% endif %}>CV</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">◑</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            {% for link in social_links %}
+            {% if link.name != "Email" %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.name }}"><i class="{{ link.icon_class }}"></i></a>
+            {% endif %}
+            {% endfor %}
+            <a href="#" id="footer-email-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>© {{ current_year }} Fernando Pérez-García</p>
+    </footer>
+
+    <script>
+    function toggleTheme() {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : current === 'light' ? null : 'dark';
+        if (next) {
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        } else {
+            html.removeAttribute('data-theme');
+            localStorage.removeItem('theme');
+        }
+    }
+    (function() {
+        const saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+        var u = 'fepegar', d = 'gmail.com';
+        var el = document.getElementById('footer-email-link');
+        if (el) el.href = 'mail' + 'to:' + u + '@' + d;
+    })();
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
