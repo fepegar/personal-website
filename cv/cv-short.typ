@@ -3,14 +3,10 @@
 
 #show: cv-setup
 
-#set page(margin: (x: 1.6cm, y: 1.4cm))
-#set text(size: 9.5pt)
-#set par(leading: 0.55em)
-
 #cv-header()
 
 #section("Profile")
-#cv-profile-short
+#cv-profile-long
 
 #section("Experience")
 #for exp in experience {
@@ -24,9 +20,11 @@
 
 #section("Education")
 #for edu in education {
+  let bullets = edu.bullets.map(b => [- #b]).join()
   entry(
     [*#edu.degree* — _#edu.institution _],
     [_#edu.dates _],
+    description: if edu.bullets.len() > 0 { bullets },
   )
 }
 
