@@ -125,7 +125,7 @@
   (
     title: "RadEdit: stress-testing biomedical vision models via diffusion image editing",
     authors: "Fernando Pérez-García, Sam Bond-Taylor, Pedro P Sanchez, Boris van Breugel, Daniel C Castro, Harshita Sharma, Valentina Salvatelli, Maria TA Wetscherek, Hannah Richardson, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, Ozan Oktay, and Maximilian Ilse",
-    venue: "",
+    venue: "European Conference on Computer Vision (ECCV)",
     year: 2024,
   ),
   (
@@ -206,7 +206,7 @@
   (
     title: "RadEdit: stress-testing biomedical vision models via diffusion image editing",
     authors: "Fernando Pérez-García, Sam Bond-Taylor, Pedro P Sanchez, Boris van Breugel, Daniel C Castro, Harshita Sharma, Valentina Salvatelli, Maria TA Wetscherek, Hannah Richardson, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, Ozan Oktay, and Maximilian Ilse",
-    venue: "",
+    venue: "European Conference on Computer Vision (ECCV)",
     year: 2024,
   ),
   (
