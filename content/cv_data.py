@@ -2,7 +2,7 @@
 
 EXPERIENCE = [
     {
-        "title": "Senior Researcher and Tech Lead",
+        "title": "Senior Researcher and Team Lead",
         "organization": "Microsoft Health Futures",
         "location": "Cambridge, UK",
         "start": "Feb 2022",

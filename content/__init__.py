@@ -4,7 +4,7 @@ PERSONAL = {
     "name": "Fernando Pérez-García",
     "pronouns": "he/him",
     "email": "fepegar@gmail.com",
-    "title": "Senior Researcher and Tech Lead",
+    "title": "Senior Researcher and Team Lead",
     "affiliation": "Microsoft Research",
     "affiliation_url": "https://www.microsoft.com/en-us/research",
     "location": "Cambridge, UK",
@@ -56,7 +56,7 @@ SOCIAL_LINKS = [
 ]
 
 BIO = (
-    "I am a senior researcher and tech lead at"
+    "I am a senior researcher and team lead at"
     " <a href='https://www.microsoft.com/en-us/research/'>Microsoft Research</a>."
     " My work within <a href='https://www.microsoft.com/en-us/research/lab/microsoft-health-futures/'>Microsoft Health Futures</a> focuses on translating"
     " multimodal artificial intelligence research into clinical practice."
