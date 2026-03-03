@@ -306,7 +306,7 @@ img { max-width: 100%; height: auto; }
   align-items: flex-start;
 }
 .pub-thumbnail {
-  width: 160px;
+  width: 200px;
   height: auto;
   border-radius: 4px;
   flex-shrink: 0;
