@@ -19,9 +19,14 @@ _SELECTED_TITLES = [
 _EXTRA = {
     "Exploring scalable medical image encoders beyond text supervision": {
         "code_url": "https://huggingface.co/microsoft/rad-dino",
+        "image_url": "/static/img/publications/raddino.jpg",
+    },
+    "MAIRA-2: Grounded Radiology Report Generation": {
+        "image_url": "/static/img/publications/maira2.jpg",
     },
     "RadEdit: stress-testing biomedical vision models via diffusion image editing": {
         "code_url": "https://huggingface.co/microsoft/radedit",
+        "image_url": "/static/img/publications/radedit.jpg",
     },
     "TorchIO: a Python library for efficient loading, preprocessing, augmentation and patch-based sampling of medical images in deep learning": {
         "code_url": "https://github.com/TorchIO-project/torchio",

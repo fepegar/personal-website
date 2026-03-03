@@ -5,18 +5,23 @@
 {% block content %}
 <h2>Selected Publications</h2>
 {% for pub in publications %}
-<div class="pub-card">
-    <div class="pub-title"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></div>
-    <div class="pub-authors">{{ pub.authors | bold_name }}</div>
-    <div class="pub-venue">{{ pub.venue }}, {{ pub.year }}</div>
-    {% if pub.description %}
-    <div class="pub-description">{{ pub.description }}</div>
+<div class="pub-card pub-card-selected">
+    {% if pub.image_url %}
+    <img src="{{ pub.image_url }}" alt="{{ pub.title }}" class="pub-thumbnail">
     {% endif %}
-    <div class="pub-links">
-        <a href="{{ pub.url }}" class="pub-link" target="_blank" rel="noopener">Paper</a>
-        {% if pub.code_url %}
-        <a href="{{ pub.code_url }}" class="pub-link" target="_blank" rel="noopener">Code / Model</a>
+    <div class="pub-body">
+        <div class="pub-title"><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a></div>
+        <div class="pub-authors">{{ pub.authors | bold_name }}</div>
+        <div class="pub-venue">{{ pub.venue }}, {{ pub.year }}</div>
+        {% if pub.description %}
+        <div class="pub-description">{{ pub.description }}</div>
         {% endif %}
+        <div class="pub-links">
+            <a href="{{ pub.url }}" class="pub-link" target="_blank" rel="noopener">Paper</a>
+            {% if pub.code_url %}
+            <a href="{{ pub.code_url }}" class="pub-link" target="_blank" rel="noopener">Code / Model</a>
+            {% endif %}
+        </div>
     </div>
 </div>
 {% endfor %}
