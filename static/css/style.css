@@ -313,6 +313,7 @@ img { max-width: 100%; height: auto; }
   object-fit: cover;
 }
 .pub-body { flex: 1; min-width: 0; }
+.content:has(.pub-card-selected) { max-width: calc(var(--max-width) * 2); }
 @media (max-width: 640px) {
   .pub-card-selected { flex-direction: column; }
   .pub-thumbnail { width: 100%; }
