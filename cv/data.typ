@@ -1,12 +1,12 @@
 // AUTO-GENERATED from content/cv_data.py — do not edit manually
 
 #let name = "Fernando Pérez-García"
-#let job-title = "Senior Researcher and Tech Lead"
+#let job-title = "Senior Researcher and Team Lead"
 #let affiliation = "Microsoft Research"
 #let location = "Cambridge, UK"
 #let email = "fepegar@gmail.com"
 
-#let profile = "I am a senior researcher and tech lead at Microsoft Research. My work within Microsoft Health Futures focuses on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
+#let profile = "I am a senior researcher and team lead at Microsoft Research. My work within Microsoft Health Futures focuses on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
 
 #let cv-profile-long = "I am an engineer with a PhD in Medical Imaging and a decade of experience applying cutting-edge multimodal AI for healthcare to solve real-world problems and supporting biomedical research. I strongly believe in the importance of meaningful translational research and have developed open-source machine learning software actively used by both clinicians and researchers. I enjoy being halfway between research and engineering and have developed strong communication skills to connect ideas from both worlds."
 
@@ -14,7 +14,7 @@
 
 #let experience = (
   (
-    title: "Senior Researcher and Tech Lead",
+    title: "Senior Researcher and Team Lead",
     org-loc: "Microsoft Health Futures, Cambridge, UK",
     dates: "Feb 2022 – Present",
     bullets: (
