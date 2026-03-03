@@ -93,7 +93,7 @@
     "title": "RadEdit: stress-testing biomedical vision models via diffusion image editing",
     "abstract": "Biomedical imaging datasets are often small and biased, meaning that real-world performance of predictive models can be substantially lower than expected from internal testing. This work proposes using generative image editing to simulate dataset shifts and diagnose failure modes of biomedical vision models; this can be used in advance of deployment to assess readiness, potentially reducing cost and patient harm. Existing editing methods can produce undesirable changes, with spurious correlations learned due to the co-occurrence of disease and treatment interventions, limiting practical applicability. To address this, we train a text-to-image diffusion model on multiple chest X-ray datasets and introduce a new editing method, RadEdit, that uses multiple image masks, if present, to constrain changes and ensure consistency in the edited images, minimising bias. We consider three types of dataset shifts …",
     "year": 2024,
-    "venue": "",
+    "venue": "European Conference on Computer Vision (ECCV)",
     "citationCount": 28,
     "authors": "Fernando Pérez-García, Sam Bond-Taylor, Pedro P Sanchez, Boris van Breugel, Daniel C Castro, Harshita Sharma, Valentina Salvatelli, Maria TA Wetscherek, Hannah Richardson, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, Ozan Oktay, and Maximilian Ilse",
     "url": "https://link.springer.com/chapter/10.1007/978-3-031-73254-6_21",
