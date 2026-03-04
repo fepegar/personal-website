@@ -30,7 +30,7 @@ def bold_name(authors: str) -> Markup:
 
 @app.context_processor
 def inject_globals():
-    return {"current_year": date.today().year}
+    return {"current_year": date.today().year, "social_links": SOCIAL_LINKS}
 
 
 @app.route("/")
@@ -39,7 +39,6 @@ def home():
         "home.html",
         personal=PERSONAL,
         bio=BIO,
-        social_links=SOCIAL_LINKS,
     )
 
 
