@@ -30,7 +30,7 @@ jobs:
       - name: Freeze static site
         run: mise run freeze
 
-      - name: Deploy preview to smokeshow
+      - name: Deploy preview to Smokeshow
         id: smokeshow
         run: |
           output=$(uvx smokeshow upload build)
