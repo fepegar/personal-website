@@ -1,0 +1,38 @@
+name: Preview Deploy
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  statuses: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v4
+
+      - uses: jdx/mise-action@v2
+
+      - name: Install Python dependencies
+        run: uv sync
+
+      - name: Generate CV data
+        run: mise run generate-cv-data
+
+      - name: Build CVs
+        run: mise run build-cv
+
+      - name: Freeze static site
+        run: mise run freeze
+
+      - name: Deploy preview to smokeshow
+        run: uvx smokeshow upload build
+        env:
+          SMOKESHOW_GITHUB_STATUS_DESCRIPTION: Preview deploy
+          SMOKESHOW_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SMOKESHOW_GITHUB_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          SMOKESHOW_AUTH_KEY: ${{ secrets.SMOKESHOW_AUTH_KEY }}
