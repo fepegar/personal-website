@@ -306,13 +306,14 @@ img { max-width: 100%; height: auto; }
   align-items: flex-start;
 }
 .pub-thumbnail {
-  width: 160px;
+  width: 250px;
   height: auto;
   border-radius: 4px;
   flex-shrink: 0;
   object-fit: cover;
 }
 .pub-body { flex: 1; min-width: 0; }
+.content:has(.pub-card-selected) { max-width: calc(var(--max-width) * 1.5); }
 @media (max-width: 640px) {
   .pub-card-selected { flex-direction: column; }
   .pub-thumbnail { width: 100%; }
