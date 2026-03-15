@@ -48,7 +48,7 @@ def _load_selected() -> list[dict]:
                 "authors": pub["authors"],
                 "venue": pub.get("venue", ""),
                 "year": pub.get("year"),
-                "url": pub.get("pub_url", ""),
+                "url": pub.get("url", ""),
                 "description": pub.get("abstract", ""),
                 **_EXTRA.get(title, {}),
             }

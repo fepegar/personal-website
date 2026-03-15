@@ -25,7 +25,11 @@
                     </div>
                 </li>
                 <li><a href="{{ url_for('cv') }}" {% if '/cv' in request.path %}class="active"{% endif %}>CV</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">◑</button></li>
+                <li>
+                    <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Theme: auto" title="Theme: auto">
+                        <i id="theme-toggle-icon" class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -47,21 +51,53 @@
     </footer>
 
     <script>
-    function toggleTheme() {
+    function getThemeMode() {
+        return localStorage.getItem('theme') || 'auto';
+    }
+
+    function setThemeMode(mode) {
         const html = document.documentElement;
-        const current = html.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : current === 'light' ? null : 'dark';
-        if (next) {
-            html.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-        } else {
+        if (mode === 'auto') {
             html.removeAttribute('data-theme');
             localStorage.removeItem('theme');
+        } else {
+            html.setAttribute('data-theme', mode);
+            localStorage.setItem('theme', mode);
         }
+        updateThemeToggle();
     }
+
+    function toggleTheme() {
+        const current = getThemeMode();
+        const next = current === 'auto' ? 'dark' : current === 'dark' ? 'light' : 'auto';
+        setThemeMode(next);
+    }
+
+    function updateThemeToggle() {
+        const mode = getThemeMode();
+        const button = document.querySelector('.theme-toggle');
+        const icon = document.getElementById('theme-toggle-icon');
+        const iconMap = {
+            auto: 'fa-circle-half-stroke',
+            light: 'fa-sun',
+            dark: 'fa-moon',
+        };
+        const labelMap = {
+            auto: 'Theme: auto',
+            light: 'Theme: light',
+            dark: 'Theme: dark',
+        };
+        if (!button || !icon) return;
+        icon.className = `fa-solid ${iconMap[mode]}`;
+        button.dataset.mode = mode;
+        button.setAttribute('aria-label', labelMap[mode]);
+        button.title = labelMap[mode];
+    }
+
     (function() {
         const saved = localStorage.getItem('theme');
         if (saved) document.documentElement.setAttribute('data-theme', saved);
+        updateThemeToggle();
         var u = 'fepegar', d = 'gmail.com';
         var el = document.getElementById('footer-email-link');
         if (el) el.href = 'mail' + 'to:' + u + '@' + d;

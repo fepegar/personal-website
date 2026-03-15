@@ -29,7 +29,7 @@ run = """
 mkdir -p static/cv
 typst compile cv/cv-short.typ static/cv/cv-short.pdf
 typst compile cv/cv-long.typ static/cv/cv-long.pdf
-python scripts/check_cv_pages.py
+uv run python scripts/check_cv_pages.py
 """
 
 [tasks.freeze]
