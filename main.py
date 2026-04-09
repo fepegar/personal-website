@@ -22,6 +22,13 @@ _NAME_VARIANTS = [
 _NAME_RE = re.compile("(" + "|".join(_NAME_VARIANTS) + ")")
 
 
+@app.template_filter("natural_date")
+def natural_date(iso_date: str) -> str:
+    """Format an ISO date string (YYYY-MM-DD) as a natural date, e.g. 8 April 2026."""
+    d = date.fromisoformat(iso_date)
+    return f"{d.day} {d.strftime('%B')} {d.year}"
+
+
 @app.template_filter("bold_name")
 def bold_name(authors: str) -> Markup:
     """Bold the author's name in an author list."""
