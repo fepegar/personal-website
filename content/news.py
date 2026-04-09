@@ -2,6 +2,13 @@
 
 NEWS = [
     {
+        "date": "2026-04-08",
+        "text": (
+            "Talk at the Industry Day of the International Symposium on"
+            " Biomedical Imaging (ISBI)."
+        ),
+    },
+    {
         "date": "2025-10-20",
         "text": (
             "Keynote talk at the International Conference on Computer Vision"
