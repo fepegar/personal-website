@@ -24,7 +24,7 @@
   (
     title: "Senior Researcher and Team Lead",
     org-loc: "Microsoft, Cambridge, UK",
-    dates: "Oct 2025 – Aug 2026",
+    dates: "Oct 2025 – Jul 2026",
     bullets: (
       "Led research on translating multimodal AI for healthcare into clinical practice",
       "Collaborated with Mayo Clinic to implement our multimodal LLM, MAIRA, in their clinical workflows",
