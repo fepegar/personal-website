@@ -2,15 +2,35 @@
 
 EXPERIENCE = [
     {
+        "title": "Senior Research Manager",
+        "organization": "Microsoft AI",
+        "location": "England, UK",
+        "start": "Aug 2026",
+        "end": "Present",
+        "bullets": [
+            "Multimodal AI for Healthcare at Microsoft Research Cambridge",
+        ],
+    },
+    {
         "title": "Senior Researcher and Team Lead",
-        "organization": "Microsoft Health Futures",
+        "organization": "Microsoft",
+        "location": "Cambridge, UK",
+        "start": "Oct 2025",
+        "end": "Aug 2026",
+        "bullets": [
+            "Led research on translating multimodal AI for healthcare into clinical practice",
+            "Collaborated with Mayo Clinic to implement our multimodal LLM, MAIRA, in their clinical workflows",
+        ],
+    },
+    {
+        "title": "Senior Researcher",
+        "organization": "Microsoft",
         "location": "Cambridge, UK",
         "start": "Feb 2022",
-        "end": "Present",
+        "end": "Oct 2025",
         "bullets": [
             "Focus on Multimodal AI for healthcare: self-supervised learning (e.g. RAD-DINO, Nature Machine Intelligence) and generative diffusion models for medical imaging (e.g. RadEdit, ECCV)",
             "Collaborated with the NHS to develop a deep learning model for hippocampal segmentation from brain MRI scans",
-            "Collaborated with Mayo Clinic to implement our multimodal LLM, MAIRA, in their clinical workflows",
         ],
     },
     {
