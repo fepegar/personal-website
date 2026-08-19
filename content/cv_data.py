@@ -16,7 +16,7 @@ EXPERIENCE = [
         "organization": "Microsoft",
         "location": "Cambridge, UK",
         "start": "Oct 2025",
-        "end": "Aug 2026",
+        "end": "Jul 2026",
         "bullets": [
             "Led research on translating multimodal AI for healthcare into clinical practice",
             "Collaborated with Mayo Clinic to implement our multimodal LLM, MAIRA, in their clinical workflows",
