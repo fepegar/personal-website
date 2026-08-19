@@ -57,9 +57,9 @@ SOCIAL_LINKS = [
 
 BIO = (
     "I am a senior research manager at"
-    " <a href='https://microsoft.ai/'>Microsoft AI</a>."
-    " My work at <a href='https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/'>Microsoft Research Cambridge</a> focuses on translating"
-    " multimodal artificial intelligence research into clinical practice."
+    " <a href='https://microsoft.ai/'>Microsoft AI</a>"
+    " focusing on translating multimodal artificial intelligence research"
+    " into clinical practice."
     "\n\n"
     "I hold a PhD in Medical Imaging from"
     " <a href='https://www.ucl.ac.uk/'>UCL</a> and"
