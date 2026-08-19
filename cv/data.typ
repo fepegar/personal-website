@@ -186,7 +186,7 @@
     year: 2021,
   ),
   (
-    title: "Monai label: A framework for ai-assisted interactive labeling of 3d medical images",
+    title: "MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images",
     authors: "Andres Diaz-Pinto, Sachidanand Alle, Vishwesh Nath, Yucheng Tang, Alvin Ihsani, Muhammad Asad, Fernando Pérez-García, Pritesh Mehta, Wenqi Li, Mona Flores, Holger R Roth, Tom Vercauteren, Daguang Xu, Prerna Dogra, Sebastien Ourselin, Andrew Feng, and M Jorge Cardoso",
     venue: "Medical Image Analysis",
     year: 2024,
@@ -231,7 +231,7 @@
     year: 2025,
   ),
   (
-    title: "Monai label: A framework for ai-assisted interactive labeling of 3d medical images",
+    title: "MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images",
     authors: "Andres Diaz-Pinto, Sachidanand Alle, Vishwesh Nath, Yucheng Tang, Alvin Ihsani, Muhammad Asad, Fernando Pérez-García, Pritesh Mehta, Wenqi Li, Mona Flores, Holger R Roth, Tom Vercauteren, Daguang Xu, Prerna Dogra, Sebastien Ourselin, Andrew Feng, and M Jorge Cardoso",
     venue: "Medical Image Analysis",
     year: 2024,

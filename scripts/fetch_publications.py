@@ -36,6 +36,20 @@ _HEADER_PATTERN = re.compile(
 )
 
 
+# Google Scholar sentence-cases some titles, mangling acronyms. Keys are the
+# mangled titles, lowercased; values are the titles as they should be shown.
+TITLE_OVERRIDES = {
+    "monai label: a framework for ai-assisted interactive labeling of 3d medical images": (
+        "MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images"
+    ),
+}
+
+
+def fix_title(title: str) -> str:
+    """Restore the correct casing of titles mangled by Google Scholar."""
+    return TITLE_OVERRIDES.get(title.strip().lower(), title)
+
+
 def clean_abstract(text: str) -> str:
     """Remove concatenated section headers from abstracts."""
     # Handle header at the very start
@@ -76,7 +90,7 @@ def fetch_all_papers() -> list[dict]:
 
         bib = filled.get("bib", {})
         papers.append({
-            "title": bib.get("title", ""),
+            "title": fix_title(bib.get("title", "")),
             "abstract": clean_abstract(bib.get("abstract", "")),
             "year": int(bib.get("pub_year", 0)) if bib.get("pub_year") else None,
             "venue": bib.get("venue", "") or bib.get("journal", "") or bib.get("conference", ""),
