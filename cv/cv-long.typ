@@ -35,6 +35,11 @@
 #section("Languages")
 #languages
 
+#section("Peer Review")
+#for review in peer-reviews {
+  [- Reviewer, _#review.journal_ (#review.year).]
+}
+
 #section("Publications")
 #for pub in all-publications {
   let year-str = if pub.year != none [#pub.year] else []

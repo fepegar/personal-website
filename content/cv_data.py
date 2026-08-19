@@ -159,3 +159,14 @@ LANGUAGES = (
     " proficiency; German (Goethe-Zertifikat B2 – 2012) and Italian:"
     " intermediate; Chinese (HSK2 – 2013) and Arabic: beginner."
 )
+
+PEER_REVIEWS = [
+    {
+        "journal": "The International Journal for Computer Assisted Radiology and Surgery (IJCARS)",
+        "year": "2021",
+    },
+    {
+        "journal": "Medical Image Analysis",
+        "year": "2026",
+    },
+]

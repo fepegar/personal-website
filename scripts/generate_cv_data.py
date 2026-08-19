@@ -12,7 +12,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from content import BIO, PERSONAL
-from content.cv_data import EDUCATION, EXPERIENCE, LANGUAGES, TECHNICAL_SKILLS
+from content.cv_data import (
+    EDUCATION,
+    EXPERIENCE,
+    LANGUAGES,
+    PEER_REVIEWS,
+    TECHNICAL_SKILLS,
+)
 from content.publications import SELECTED_PUBLICATIONS
 
 PUBLICATIONS_JSON = Path(__file__).parent.parent / "data" / "publications.json"
@@ -117,6 +123,16 @@ def generate() -> str:
 
     # Languages
     lines.append(f'#let languages = "{escape_typst(LANGUAGES)}"')
+    lines.append("")
+
+    # Peer reviews
+    lines.append("#let peer-reviews = (")
+    for review in PEER_REVIEWS:
+        lines.append("  (")
+        lines.append(f'    journal: "{escape_typst(review["journal"])}",')
+        lines.append(f'    year: "{escape_typst(review["year"])}",')
+        lines.append("  ),")
+    lines.append(")")
     lines.append("")
 
     # Selected publications
