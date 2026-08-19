@@ -53,7 +53,7 @@ def generate() -> str:
     lines.append("")
 
     lines.append(
-        '#let cv-profile-long = "I am an engineer with a PhD in Medical'
+        '#let cv-profile-long = "I am a researcher/engineer with a PhD in Medical'
         " Imaging and a decade of experience applying cutting-edge multimodal"
         " AI for healthcare to solve real-world problems and supporting"
         " biomedical research. I strongly believe in the importance of"
@@ -65,7 +65,7 @@ def generate() -> str:
     )
     lines.append("")
     lines.append(
-        '#let cv-profile-short = "I am an engineer with a PhD in Medical'
+        '#let cv-profile-short = "I am a researcher/engineer with a PhD in Medical'
         " Imaging and a decade of experience applying multimodal AI for"
         " healthcare. I develop open-source machine learning software used by"
         " clinicians and researchers. I combine research and engineering with"
