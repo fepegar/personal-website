@@ -12,7 +12,7 @@ _SELECTED_TITLES = [
     "RadEdit: stress-testing biomedical vision models via diffusion image editing",
     "Learning to exploit temporal structure for biomedical vision-language processing",
     "TorchIO: a Python library for efficient loading, preprocessing, augmentation and patch-based sampling of medical images in deep learning",
-    "MONAI Label: A framework for AI-assisted interactive labeling of 3D medical images",
+    "MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images",
 ]
 
 # Extra metadata not available in Google Scholar

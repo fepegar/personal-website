@@ -187,6 +187,7 @@ It does a few cleanup steps:
 - fetches the author profile for Google Scholar author ID `Gc2eg3kAAAAJ`
 - fills each publication entry with detailed metadata
 - cleans malformed structured abstracts
+- restores the correct casing of titles that Google Scholar sentence-cases (see `TITLE_OVERRIDES`)
 - reformats author lists from repeated `"and"` separators into a readable list
 - sorts output by year and citation count
 - writes the result to `data/publications.json`
