@@ -37,7 +37,7 @@
 
 #section("Peer Review")
 #for review in peer-reviews {
-  [- Reviewer, _#review.journal_ (#review.year).]
+  [- Reviewer, _#review.journal _ (#review.year).]
 }
 
 #section("Publications")
