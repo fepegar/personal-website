@@ -143,6 +143,17 @@
 
 #let languages = "Spanish: native; English (IELTS – 2017) and French: full professional proficiency; German (Goethe-Zertifikat B2 – 2012) and Italian: intermediate; Chinese (HSK2 – 2013) and Arabic: beginner."
 
+#let peer-reviews = (
+  (
+    journal: "The International Journal for Computer Assisted Radiology and Surgery (IJCARS)",
+    year: "2021",
+  ),
+  (
+    journal: "Medical Image Analysis",
+    year: "2026",
+  ),
+)
+
 #let selected-publications = (
   (
     title: "Exploring scalable medical image encoders beyond text supervision",
