@@ -6,7 +6,7 @@ PERSONAL = {
     "email": "fepegar@gmail.com",
     "title": "Senior Research Manager",
     "affiliation": "Microsoft AI",
-    "affiliation_url": "https://www.microsoft.com/en-us/ai",
+    "affiliation_url": "https://microsoft.ai/",
     "location": "Cambridge, UK",
     "avatar_url": "/static/img/photo.jpg",
     "keywords": [
@@ -57,7 +57,7 @@ SOCIAL_LINKS = [
 
 BIO = (
     "I am a senior research manager at"
-    " <a href='https://www.microsoft.com/en-us/ai'>Microsoft AI</a>."
+    " <a href='https://microsoft.ai/'>Microsoft AI</a>."
     " My work at <a href='https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/'>Microsoft Research Cambridge</a> focuses on translating"
     " multimodal artificial intelligence research into clinical practice."
     "\n\n"
