@@ -40,13 +40,31 @@
     ),
   ),
   (
-    title: "Research Software Engineer (freelance)",
-    org-loc: "",
-    dates: "Jan 2019 – Sep 2021",
+    title: "Postgraduate Teaching Assistant (PGTA)",
+    org-loc: "UCL, London, UK",
+    dates: "Sep 2021 – Dec 2021",
     bullets: (
-      "Paris Brain Institute (ICM): Developed tools to build a 3D atlas of the macaque brainstem (histology & MRI)",
-      "Arterys – Medical Imaging Cloud AI: Deployed deep learning models for medical images using Docker",
-      "Medical Augmented Intelligence (MAI): Developed virtual reality and medical imaging software on 3D Slicer",
+    ),
+  ),
+  (
+    title: "Medical Research Software Engineer",
+    org-loc: "Institut du Cerveau – Paris Brain Institute, Paris, France",
+    dates: "Jul 2020 – Aug 2020",
+    bullets: (
+    ),
+  ),
+  (
+    title: "Medical Artificial Intelligence Engineer",
+    org-loc: "Arterys",
+    dates: "Nov 2019 – Dec 2019",
+    bullets: (
+    ),
+  ),
+  (
+    title: "Medical Research Software Engineer",
+    org-loc: "MAI.ai",
+    dates: "Jan 2019 – Jul 2019",
+    bullets: (
     ),
   ),
   (
