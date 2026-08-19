@@ -2,28 +2,68 @@
 
 EXPERIENCE = [
     {
-        "title": "Senior Researcher and Team Lead",
-        "organization": "Microsoft Health Futures",
-        "location": "Cambridge, UK",
-        "start": "Feb 2022",
+        "title": "Senior Research Manager",
+        "organization": "Microsoft AI",
+        "location": "England, UK",
+        "start": "Aug 2026",
         "end": "Present",
         "bullets": [
-            "Focus on Multimodal AI for healthcare: self-supervised learning (e.g. RAD-DINO, Nature Machine Intelligence) and generative diffusion models for medical imaging (e.g. RadEdit, ECCV)",
-            "Collaborated with the NHS to develop a deep learning model for hippocampal segmentation from brain MRI scans",
+            "Multimodal AI for Healthcare at Microsoft Research Cambridge",
+        ],
+    },
+    {
+        "title": "Senior Researcher and Team Lead",
+        "organization": "Microsoft",
+        "location": "Cambridge, UK",
+        "start": "Oct 2025",
+        "end": "Jul 2026",
+        "bullets": [
+            "Led research on translating multimodal AI for healthcare into clinical practice",
             "Collaborated with Mayo Clinic to implement our multimodal LLM, MAIRA, in their clinical workflows",
         ],
     },
     {
-        "title": "Research Software Engineer (freelance)",
-        "organization": "",
+        "title": "Senior Researcher",
+        "organization": "Microsoft",
+        "location": "Cambridge, UK",
+        "start": "Feb 2022",
+        "end": "Oct 2025",
+        "bullets": [
+            "Focus on Multimodal AI for healthcare: self-supervised learning (e.g. RAD-DINO, Nature Machine Intelligence) and generative diffusion models for medical imaging (e.g. RadEdit, ECCV)",
+            "Collaborated with the NHS to develop a deep learning model for hippocampal segmentation from brain MRI scans",
+        ],
+    },
+    {
+        "title": "Postgraduate Teaching Assistant (PGTA)",
+        "organization": "UCL",
+        "location": "London, UK",
+        "start": "Sep 2021",
+        "end": "Dec 2021",
+        "bullets": [],
+    },
+    {
+        "title": "Medical Research Software Engineer",
+        "organization": "Institut du Cerveau – Paris Brain Institute",
+        "location": "Paris, France",
+        "start": "Jul 2020",
+        "end": "Aug 2020",
+        "bullets": [],
+    },
+    {
+        "title": "Medical Artificial Intelligence Engineer",
+        "organization": "Arterys",
+        "location": "",
+        "start": "Nov 2019",
+        "end": "Dec 2019",
+        "bullets": [],
+    },
+    {
+        "title": "Medical Research Software Engineer",
+        "organization": "MAI.ai",
         "location": "",
         "start": "Jan 2019",
-        "end": "Sep 2021",
-        "bullets": [
-            "Paris Brain Institute (ICM): Developed tools to build a 3D atlas of the macaque brainstem (histology & MRI)",
-            "Arterys – Medical Imaging Cloud AI: Deployed deep learning models for medical images using Docker",
-            "Medical Augmented Intelligence (MAI): Developed virtual reality and medical imaging software on 3D Slicer",
-        ],
+        "end": "Jul 2019",
+        "bullets": [],
     },
     {
         "title": "Research Software Engineer",
@@ -119,3 +159,14 @@ LANGUAGES = (
     " proficiency; German (Goethe-Zertifikat B2 – 2012) and Italian:"
     " intermediate; Chinese (HSK2 – 2013) and Arabic: beginner."
 )
+
+PEER_REVIEWS = [
+    {
+        "journal": "The International Journal for Computer Assisted Radiology and Surgery (IJCARS)",
+        "year": "2021",
+    },
+    {
+        "journal": "Medical Image Analysis",
+        "year": "2026",
+    },
+]

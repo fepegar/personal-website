@@ -1,36 +1,70 @@
 // AUTO-GENERATED from content/cv_data.py — do not edit manually
 
 #let name = "Fernando Pérez-García"
-#let job-title = "Senior Researcher and Team Lead"
-#let affiliation = "Microsoft Research"
+#let job-title = "Senior Research Manager"
+#let affiliation = "Microsoft AI"
 #let location = "Cambridge, UK"
 #let email = "fepegar@gmail.com"
 
-#let profile = "I am a senior researcher and team lead at Microsoft Research. My work within Microsoft Health Futures focuses on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
+#let profile = "I am a senior research manager at Microsoft AI focusing on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
 
-#let cv-profile-long = "I am an engineer with a PhD in Medical Imaging and a decade of experience applying cutting-edge multimodal AI for healthcare to solve real-world problems and supporting biomedical research. I strongly believe in the importance of meaningful translational research and have developed open-source machine learning software actively used by both clinicians and researchers. I enjoy being halfway between research and engineering and have developed strong communication skills to connect ideas from both worlds."
+#let cv-profile-long = "I am a researcher/engineer with a PhD in Medical Imaging and a decade of experience applying cutting-edge multimodal AI for healthcare to solve real-world problems and supporting biomedical research. I strongly believe in the importance of meaningful translational research and have developed open-source machine learning software actively used by both clinicians and researchers. I enjoy being halfway between research and engineering and have developed strong communication skills to connect ideas from both worlds."
 
-#let cv-profile-short = "I am an engineer with a PhD in Medical Imaging and a decade of experience applying multimodal AI for healthcare. I develop open-source machine learning software used by clinicians and researchers. I combine research and engineering with strong communication skills."
+#let cv-profile-short = "I am a researcher/engineer with a PhD in Medical Imaging and a decade of experience applying multimodal AI for healthcare. I develop open-source machine learning software used by clinicians and researchers. I combine research and engineering with strong communication skills."
 
 #let experience = (
   (
-    title: "Senior Researcher and Team Lead",
-    org-loc: "Microsoft Health Futures, Cambridge, UK",
-    dates: "Feb 2022 – Present",
+    title: "Senior Research Manager",
+    org-loc: "Microsoft AI, England, UK",
+    dates: "Aug 2026 – Present",
     bullets: (
-      "Focus on Multimodal AI for healthcare: self-supervised learning (e.g. RAD-DINO, Nature Machine Intelligence) and generative diffusion models for medical imaging (e.g. RadEdit, ECCV)",
-      "Collaborated with the NHS to develop a deep learning model for hippocampal segmentation from brain MRI scans",
+      "Multimodal AI for Healthcare at Microsoft Research Cambridge",
+    ),
+  ),
+  (
+    title: "Senior Researcher and Team Lead",
+    org-loc: "Microsoft, Cambridge, UK",
+    dates: "Oct 2025 – Jul 2026",
+    bullets: (
+      "Led research on translating multimodal AI for healthcare into clinical practice",
       "Collaborated with Mayo Clinic to implement our multimodal LLM, MAIRA, in their clinical workflows",
     ),
   ),
   (
-    title: "Research Software Engineer (freelance)",
-    org-loc: "",
-    dates: "Jan 2019 – Sep 2021",
+    title: "Senior Researcher",
+    org-loc: "Microsoft, Cambridge, UK",
+    dates: "Feb 2022 – Oct 2025",
     bullets: (
-      "Paris Brain Institute (ICM): Developed tools to build a 3D atlas of the macaque brainstem (histology & MRI)",
-      "Arterys – Medical Imaging Cloud AI: Deployed deep learning models for medical images using Docker",
-      "Medical Augmented Intelligence (MAI): Developed virtual reality and medical imaging software on 3D Slicer",
+      "Focus on Multimodal AI for healthcare: self-supervised learning (e.g. RAD-DINO, Nature Machine Intelligence) and generative diffusion models for medical imaging (e.g. RadEdit, ECCV)",
+      "Collaborated with the NHS to develop a deep learning model for hippocampal segmentation from brain MRI scans",
+    ),
+  ),
+  (
+    title: "Postgraduate Teaching Assistant (PGTA)",
+    org-loc: "UCL, London, UK",
+    dates: "Sep 2021 – Dec 2021",
+    bullets: (
+    ),
+  ),
+  (
+    title: "Medical Research Software Engineer",
+    org-loc: "Institut du Cerveau – Paris Brain Institute, Paris, France",
+    dates: "Jul 2020 – Aug 2020",
+    bullets: (
+    ),
+  ),
+  (
+    title: "Medical Artificial Intelligence Engineer",
+    org-loc: "Arterys",
+    dates: "Nov 2019 – Dec 2019",
+    bullets: (
+    ),
+  ),
+  (
+    title: "Medical Research Software Engineer",
+    org-loc: "MAI.ai",
+    dates: "Jan 2019 – Jul 2019",
+    bullets: (
     ),
   ),
   (
@@ -108,6 +142,17 @@
 #let skill-tools = "Azure Cloud, PyTorch, Docker, Git[Hub], uv, pytest, tox, VS Code, TorchIO, MONAI, ITK, VTK, 3D Slicer"
 
 #let languages = "Spanish: native; English (IELTS – 2017) and French: full professional proficiency; German (Goethe-Zertifikat B2 – 2012) and Italian: intermediate; Chinese (HSK2 – 2013) and Arabic: beginner."
+
+#let peer-reviews = (
+  (
+    journal: "The International Journal for Computer Assisted Radiology and Surgery (IJCARS)",
+    year: "2021",
+  ),
+  (
+    journal: "Medical Image Analysis",
+    year: "2026",
+  ),
+)
 
 #let selected-publications = (
   (

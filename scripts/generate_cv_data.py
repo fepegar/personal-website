@@ -12,7 +12,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from content import BIO, PERSONAL
-from content.cv_data import EDUCATION, EXPERIENCE, LANGUAGES, TECHNICAL_SKILLS
+from content.cv_data import (
+    EDUCATION,
+    EXPERIENCE,
+    LANGUAGES,
+    PEER_REVIEWS,
+    TECHNICAL_SKILLS,
+)
 from content.publications import SELECTED_PUBLICATIONS
 
 PUBLICATIONS_JSON = Path(__file__).parent.parent / "data" / "publications.json"
@@ -53,7 +59,7 @@ def generate() -> str:
     lines.append("")
 
     lines.append(
-        '#let cv-profile-long = "I am an engineer with a PhD in Medical'
+        '#let cv-profile-long = "I am a researcher/engineer with a PhD in Medical'
         " Imaging and a decade of experience applying cutting-edge multimodal"
         " AI for healthcare to solve real-world problems and supporting"
         " biomedical research. I strongly believe in the importance of"
@@ -65,7 +71,7 @@ def generate() -> str:
     )
     lines.append("")
     lines.append(
-        '#let cv-profile-short = "I am an engineer with a PhD in Medical'
+        '#let cv-profile-short = "I am a researcher/engineer with a PhD in Medical'
         " Imaging and a decade of experience applying multimodal AI for"
         " healthcare. I develop open-source machine learning software used by"
         " clinicians and researchers. I combine research and engineering with"
@@ -117,6 +123,16 @@ def generate() -> str:
 
     # Languages
     lines.append(f'#let languages = "{escape_typst(LANGUAGES)}"')
+    lines.append("")
+
+    # Peer reviews
+    lines.append("#let peer-reviews = (")
+    for review in PEER_REVIEWS:
+        lines.append("  (")
+        lines.append(f'    journal: "{escape_typst(review["journal"])}",')
+        lines.append(f'    year: "{escape_typst(review["year"])}",')
+        lines.append("  ),")
+    lines.append(")")
     lines.append("")
 
     # Selected publications
