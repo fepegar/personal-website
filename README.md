@@ -26,7 +26,7 @@ At a glance:
 2. Flask routes in `main.py` pass that content into Jinja templates
 3. Templates in `templates/` render the pages
 4. CSS in `static/css/style.css` defines the site look and theme system
-5. Publications are fetched from Google Scholar into `data/publications.json`
+5. Publications and profile metrics are fetched from Google Scholar into `data/`
 6. CV data is converted into Typst data and compiled into PDFs
 7. Frozen-Flask exports the whole site to `build/`
 8. GitHub Actions deploys `build/` to GitHub Pages
@@ -59,7 +59,8 @@ At a glance:
 │   ├── cv-short.typ               # Short CV source
 │   └── data.typ                   # Auto-generated Typst data (do not edit)
 ├── data/
-│   └── publications.json          # Fetched Google Scholar cache (committed)
+│   ├── publications.json          # Fetched Google Scholar papers (committed)
+│   └── scholar.json               # Fetched h-index and citation count (committed)
 ├── scripts/
 │   ├── check_cv_pages.py          # Enforces short CV page-count limit
 │   ├── fetch_publications.py      # Fetches publications from Google Scholar
@@ -180,7 +181,7 @@ Each entry can show:
 
 ### Fetching publications
 
-`scripts/fetch_publications.py` fetches publications from Google Scholar using `scholarly`.
+`scripts/fetch_publications.py` fetches publications and profile metrics from Google Scholar using `scholarly`.
 
 It does a few cleanup steps:
 
@@ -191,10 +192,11 @@ It does a few cleanup steps:
 - reformats author lists from repeated `"and"` separators into a readable list
 - sorts output by year and citation count
 - writes the result to `data/publications.json`
+- writes the h-index and citation count to `data/scholar.json`
 
 Important detail:
 
-GitHub Actions does **not** fetch from Google Scholar during deploy. Google Scholar is unreliable from CI IP ranges, so `data/publications.json` is **committed to the repository** and updated locally instead.
+The scheduled and manually dispatched deployment refreshes and commits both files. Push-triggered deployments use the committed data so that every push does not depend on Google Scholar availability.
 
 ## CV pipeline
 
@@ -273,11 +275,12 @@ On every push to `main` (and on a weekly schedule), GitHub Actions:
 2. installs `uv`
 3. installs `mise`
 4. runs `uv sync`
-5. runs `mise run generate-cv-data`
-6. runs `mise run build-cv`
-7. runs `mise run freeze`
-8. uploads `build/`
-9. deploys to GitHub Pages
+5. refreshes and commits Google Scholar publications and metrics on scheduled or manual runs
+6. runs `mise run generate-cv-data`
+7. runs `mise run build-cv`
+8. runs `mise run freeze`
+9. uploads `build/`
+10. deploys to GitHub Pages
 
 The published site is intended to live at:
 
@@ -354,7 +357,7 @@ mise run freeze
 mise run fetch-pubs
 ```
 
-This updates `data/publications.json` locally.
+This updates `data/publications.json` and `data/scholar.json` locally.
 
 #### Fetch publications and push them
 
@@ -365,11 +368,12 @@ mise run update-pubs
 This:
 
 1. fetches publications locally
-2. stages `data/publications.json`
-3. creates a commit if needed
-4. pushes to GitHub
+2. regenerates `cv/data.typ`
+3. stages the publications, metrics, and generated CV data
+4. creates a commit if needed
+5. pushes to GitHub
 
-This is the intended way to refresh publication data, rather than doing it in CI.
+The weekly deployment performs the same refresh automatically.
 
 ## Generated vs hand-edited files
 
@@ -399,8 +403,9 @@ This is the intended way to refresh publication data, rather than doing it in CI
 ### Generated but committed
 
 - `data/publications.json`
+- `data/scholar.json`
 
-That file is committed on purpose so deploys do not depend on Google Scholar availability.
+These files are committed so push-triggered deploys do not depend on Google Scholar availability.
 
 ## Content update guide
 
@@ -451,7 +456,7 @@ mise run update-pubs
 ## Notes and caveats
 
 - The short CV is intentionally guarded by an automated page-count check.
-- Google Scholar fetching is best-effort and should be run locally.
+- Google Scholar fetching is best-effort; it can also be run locally if the scheduled refresh fails.
 - The site is static in production even though it uses Flask during development.
 - `PERSONAL["avatar_url"]` exists in content, but templates use `url_for('static', ...)` for deployment-safe asset paths.
 - The footer email link is assembled client-side in JavaScript to avoid exposing the address directly in static HTML source.
