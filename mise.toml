@@ -10,11 +10,12 @@ description = "Fetch publications from Google Scholar"
 run = "uv run python scripts/fetch_publications.py"
 
 [tasks.update-pubs]
-description = "Fetch publications and push to GitHub"
+description = "Fetch Scholar data and push to GitHub"
 depends = ["fetch-pubs"]
 run = """
-git add data/publications.json
-git commit -m "Update publications data" || echo "No changes to commit"
+uv run python scripts/generate_cv_data.py
+git add data/publications.json data/scholar.json cv/data.typ
+git commit -m "Update Google Scholar data" || echo "No changes to commit"
 git push
 """
 

@@ -12,6 +12,7 @@ AUTHOR_ID = "Gc2eg3kAAAAJ"
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), os.pardir, "data")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "publications.json")
+METRICS_FILE = os.path.join(OUTPUT_DIR, "scholar.json")
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -73,8 +74,8 @@ def format_authors(raw: str) -> str:
     return ", ".join(authors[:-1]) + ", and " + authors[-1]
 
 
-def fetch_all_papers() -> list[dict]:
-    """Fetch all papers from Google Scholar."""
+def fetch_scholar_data() -> tuple[list[dict], dict[str, int]]:
+    """Fetch the author's papers and profile metrics from Google Scholar."""
     logger.info("Fetching author profile %s from Google Scholar", AUTHOR_ID)
     author = scholarly.search_author_id(AUTHOR_ID)
     author = scholarly.fill(author, sections=["publications"])
@@ -94,17 +95,29 @@ def fetch_all_papers() -> list[dict]:
             "abstract": clean_abstract(bib.get("abstract", "")),
             "year": int(bib.get("pub_year", 0)) if bib.get("pub_year") else None,
             "venue": bib.get("venue", "") or bib.get("journal", "") or bib.get("conference", ""),
-            "citationCount": filled.get("num_citations", 0),
+            "citationCount": int(filled.get("num_citations") or 0),
             "authors": format_authors(bib.get("author", "")),
             "url": filled.get("pub_url", ""),
             "scholarUrl": filled.get("author_pub_id", ""),
         })
 
-    return papers
+    citation_counts = sorted(
+        (paper["citationCount"] for paper in papers),
+        reverse=True,
+    )
+    calculated_h_index = max(
+        (rank for rank, count in enumerate(citation_counts, 1) if count >= rank),
+        default=0,
+    )
+    metrics = {
+        "hIndex": int(author.get("hindex") or calculated_h_index),
+        "citationCount": int(author.get("citedby") or sum(citation_counts)),
+    }
+    return papers, metrics
 
 
 def main() -> None:
-    papers = fetch_all_papers()
+    papers, metrics = fetch_scholar_data()
     papers.sort(
         key=lambda p: (p.get("year") or 0, p.get("citationCount") or 0),
         reverse=True,
@@ -113,8 +126,11 @@ def main() -> None:
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(papers, f, indent=2, ensure_ascii=False)
+    with open(METRICS_FILE, "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2)
 
     logger.info("Saved %d publications to %s", len(papers), OUTPUT_FILE)
+    logger.info("Saved Scholar metrics to %s", METRICS_FILE)
 
 
 if __name__ == "__main__":

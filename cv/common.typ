@@ -1,7 +1,7 @@
 // Shared styling for Fernando Pérez-García's CV
 
 #import "@preview/cv-soft-and-hard:0.1.0": styling, section, entry, python
-#import "data.typ": name, email
+#import "data.typ": name, email, scholar-h-index, scholar-citations
 
 #let cv-setup(body) = {
   set document(author: name, title: "CV " + name)
@@ -15,7 +15,8 @@
     #link("mailto:" + email)[#email] |
     #link("https://linkedin.com/in/fernandoperezgarcia")[LinkedIn] |
     #link("https://github.com/fepegar")[GitHub] |
-    #link("https://scholar.google.com/citations?user=Gc2eg3kAAAAJ")[Scholar] |
+    #link("https://scholar.google.com/citations?user=Gc2eg3kAAAAJ")[Scholar]
+    (h-index: #scholar-h-index, ≈#scholar-citations citations) |
     #link("https://orcid.org/0000-0001-9090-3024")[ORCID]
   ]
 }

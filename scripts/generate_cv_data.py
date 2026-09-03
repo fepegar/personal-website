@@ -22,6 +22,7 @@ from content.cv_data import (
 from content.publications import SELECTED_PUBLICATIONS
 
 PUBLICATIONS_JSON = Path(__file__).parent.parent / "data" / "publications.json"
+SCHOLAR_JSON = Path(__file__).parent.parent / "data" / "scholar.json"
 
 
 def escape_typst(s: str) -> str:
@@ -42,6 +43,13 @@ def gen_pub_entry(pub: dict) -> list[str]:
     return lines
 
 
+def approximate_citations(count: int) -> str:
+    """Format a citation count compactly to one decimal place."""
+    if count < 1000:
+        return str(count)
+    return f"{count / 1000:.1f}".removesuffix(".0") + "k"
+
+
 def generate() -> str:
     lines = ["// AUTO-GENERATED from content/cv_data.py — do not edit manually\n"]
 
@@ -51,6 +59,10 @@ def generate() -> str:
     lines.append(f'#let affiliation = "{escape_typst(PERSONAL["affiliation"])}"')
     lines.append(f'#let location = "{escape_typst(PERSONAL["location"])}"')
     lines.append(f'#let email = "{escape_typst(PERSONAL["email"])}"')
+    scholar = json.loads(SCHOLAR_JSON.read_text())
+    lines.append(f'#let scholar-h-index = {scholar["hIndex"]}')
+    citations = approximate_citations(scholar["citationCount"])
+    lines.append(f'#let scholar-citations = "{citations}"')
     lines.append("")
 
     # Profiles

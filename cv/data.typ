@@ -5,6 +5,8 @@
 #let affiliation = "Microsoft AI"
 #let location = "Cambridge, UK"
 #let email = "fepegar@gmail.com"
+#let scholar-h-index = 18
+#let scholar-citations = "2.9k"
 
 #let profile = "I am a senior research manager at Microsoft AI focusing on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
 
@@ -170,7 +172,7 @@
   (
     title: "RadEdit: stress-testing biomedical vision models via diffusion image editing",
     authors: "Fernando Pérez-García, Sam Bond-Taylor, Pedro P Sanchez, Boris van Breugel, Daniel C Castro, Harshita Sharma, Valentina Salvatelli, Maria TA Wetscherek, Hannah Richardson, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, Ozan Oktay, and Maximilian Ilse",
-    venue: "European Conference on Computer Vision (ECCV)",
+    venue: "",
     year: 2024,
   ),
   (
@@ -195,21 +197,15 @@
 
 #let all-publications = (
   (
+    title: "InnerEye-HS: a disease-agnostic clinical tool for hippocampal segmentation",
+    authors: "Anna Schroder, James Moggridge, Hamza A Salhab, Caroline Micallef, Jiaming Wu, Melissa Bristow, Fernando Pérez-García, Javier Alvarez-Valle, Sjoerd B Vos, Tarek A Yousry, John S Thornton, Frederik Barkhof, John S Duncan, Daniel C Alexander, and Matthew Grech-Sollars",
+    venue: "Brain communications",
+    year: 2026,
+  ),
+  (
     title: "Exploring scalable medical image encoders beyond text supervision",
     authors: "Fernando Pérez-García, Harshita Sharma, Sam Bond-Taylor, Kenza Bouzid, Valentina Salvatelli, Maximilian Ilse, Shruthi Bannur, Daniel C Castro, Anton Schwaighofer, Matthew P Lungren, Maria Teodora Wetscherek, Noel Codella, Stephanie L Hyland, Javier Alvarez-Valle, and Ozan Oktay",
     venue: "Nature Machine Intelligence",
-    year: 2025,
-  ),
-  (
-    title: "Challenges for responsible AI design and workflow integration in healthcare: a case study of automatic feeding tube qualification in radiology",
-    authors: "Anja Thieme, Abhijith Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
-    venue: "ACM Transactions on Computer-Human Interaction",
-    year: 2025,
-  ),
-  (
-    title: "Closing the Performance Gap Between AI and Radiologists in Chest X-Ray Reporting",
-    authors: "Harshita Sharma, Maxwell C Reynolds, Valentina Salvatelli, Anne-Marie G Sykes, Kelly K Horst, Anton Schwaighofer, Maximilian Ilse, Olesya Melnichenko, Sam Bond-Taylor, Fernando Pérez-García, Vamshi K Mugu, Alex Chan, Ceylan Colak, Shelby A Swartz, Motassem B Nashawaty, Austin J Gonzalez, Heather A Ouellette, Selnur B Erdal, Beth A Schueler, Maria T Wetscherek, Noel Codella, Mohit Jain, Shruthi Bannur, Kenza Bouzid, Daniel C Castro, Stephanie Hyland, Panos Korfiatis, Ashish Khandelwal, and Javier Alvarez-Valle",
-    venue: "arXiv preprint arXiv:2511.21735",
     year: 2025,
   ),
   (
@@ -219,9 +215,21 @@
     year: 2025,
   ),
   (
+    title: "Challenges for responsible AI design and workflow integration in healthcare: a case study of automatic feeding tube qualification in radiology",
+    authors: "Anja Thieme, Abhijith Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
+    venue: "ACM Transactions on Computer-Human Interaction",
+    year: 2025,
+  ),
+  (
     title: "Data Scaling Laws for Radiology Foundation Models",
     authors: "Maximilian Ilse, Harshita Sharma, Anton Schwaighofer, Sam Bond-Taylor, Fernando Pérez-García, Olesya Melnichenko, Anne-Marie G Sykes, Kelly K Horst, Ashish Khandelwal, Maxwell Reynolds, Maria T Wetscherek, Noel CF Codella, Javier Alvarez-Valle, Korfiatis Panagiotis, and Valentina Salvatelli",
     venue: "arXiv preprint arXiv:2509.12818",
+    year: 2025,
+  ),
+  (
+    title: "Closing the Performance Gap Between AI and Radiologists in Chest X-Ray Reporting",
+    authors: "Harshita Sharma, Maxwell C Reynolds, Valentina Salvatelli, Anne-Marie G Sykes, Kelly K Horst, Anton Schwaighofer, Maximilian Ilse, Olesya Melnichenko, Sam Bond-Taylor, Fernando Pérez-García, Vamshi K Mugu, Alex Chan, Ceylan Colak, Shelby A Swartz, Motassem B Nashawaty, Austin J Gonzalez, Heather A Ouellette, Selnur B Erdal, Beth A Schueler, Maria T Wetscherek, Noel Codella, Mohit Jain, Shruthi Bannur, Kenza Bouzid, Daniel C Castro, Stephanie Hyland, Panos Korfiatis, Ashish Khandelwal, and Javier Alvarez-Valle",
+    venue: "arXiv preprint arXiv:2511.21735",
     year: 2025,
   ),
   (
@@ -231,15 +239,15 @@
     year: 2025,
   ),
   (
-    title: "MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images",
-    authors: "Andres Diaz-Pinto, Sachidanand Alle, Vishwesh Nath, Yucheng Tang, Alvin Ihsani, Muhammad Asad, Fernando Pérez-García, Pritesh Mehta, Wenqi Li, Mona Flores, Holger R Roth, Tom Vercauteren, Daguang Xu, Prerna Dogra, Sebastien Ourselin, Andrew Feng, and M Jorge Cardoso",
-    venue: "Medical Image Analysis",
-    year: 2024,
-  ),
-  (
     title: "MAIRA-2: Grounded Radiology Report Generation",
     authors: "Shruthi Bannur, Kenza Bouzid, Daniel C Castro, Anton Schwaighofer, Sam Bond-Taylor, Maximilian Ilse, Fernando Pérez-García, Valentina Salvatelli, Harshita Sharma, Felix Meissen, Mercy Ranjit, Shaury Srivastav, Julia Gong, Fabian Falck, Ozan Oktay, Anja Thieme, Matthew P Lungren, Maria Teodora Wetscherek, Javier Alvarez-Valle, and Stephanie L Hyland",
     venue: "arXiv preprint arXiv:2406.04449",
+    year: 2024,
+  ),
+  (
+    title: "MONAI Label: A framework for AI-assisted Interactive Labeling of 3D Medical Images",
+    authors: "Andres Diaz-Pinto, Sachidanand Alle, Vishwesh Nath, Yucheng Tang, Alvin Ihsani, Muhammad Asad, Fernando Pérez-García, Pritesh Mehta, Wenqi Li, Mona Flores, Holger R Roth, Tom Vercauteren, Daguang Xu, Prerna Dogra, Sebastien Ourselin, Andrew Feng, and M Jorge Cardoso",
+    venue: "Medical Image Analysis",
     year: 2024,
   ),
   (
@@ -251,7 +259,7 @@
   (
     title: "RadEdit: stress-testing biomedical vision models via diffusion image editing",
     authors: "Fernando Pérez-García, Sam Bond-Taylor, Pedro P Sanchez, Boris van Breugel, Daniel C Castro, Harshita Sharma, Valentina Salvatelli, Maria TA Wetscherek, Hannah Richardson, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, Ozan Oktay, and Maximilian Ilse",
-    venue: "European Conference on Computer Vision (ECCV)",
+    venue: "",
     year: 2024,
   ),
   (
@@ -321,15 +329,15 @@
     year: 2023,
   ),
   (
-    title: "Probabilistic landscape of seizure semiology localizing values",
-    authors: "Ali Alim-Marvasti, Gloria Romagnoli, Karan Dahele, Hadi Modarres, Fernando Pérez-García, Rachel Sparks, Sébastien Ourselin, Matthew J Clarkson, Fahmida Chowdhury, Beate Diehl, and John S Duncan",
-    venue: "Brain Communications",
-    year: 2022,
-  ),
-  (
     title: "Pedunculopontine and cuneiform nuclei deep brain stimulation for severe gait and balance disorders in Parkinson’s disease: interim results from a randomized double-blind clinical trial",
     authors: "Julie Bourilhon, Claire Olivier, Hana You, Antoine Collomb-Clerc, David Grabli, Hayat Belaid, Yannick Mullie, Chantal François, Virginie Czernecki, Brian Lau, Fernando Pérez-García, Eric Bardinet, Sara Fernandez-Vidal, Carine Karachi, and Marie-Laure Welter",
     venue: "Journal of Parkinson's disease",
+    year: 2022,
+  ),
+  (
+    title: "Probabilistic landscape of seizure semiology localizing values",
+    authors: "Ali Alim-Marvasti, Gloria Romagnoli, Karan Dahele, Hadi Modarres, Fernando Pérez-García, Rachel Sparks, Sébastien Ourselin, Matthew J Clarkson, Fahmida Chowdhury, Beate Diehl, and John S Duncan",
+    venue: "Brain Communications",
     year: 2022,
   ),
   (
@@ -394,7 +402,7 @@
   ),
   (
     title: "Multicenter validation of automated trajectories for selective laser amygdalohippocampectomy",
-    authors: "Vejay N Vakharia, Rachel E Sparks, Kuo Li, Aidan G O'Keeffe, Fernando Pérez‐García, Lucas GS França, Andrew L Ko, Chengyuan Wu, Joshua P Aronson, Brett E Youngerman, Ashwini Sharan, Guy McKhann, Sebastien Ourselin, and John S Duncan",
+    authors: "Vejay N Vakharia, Rachel E Sparks, Kuo Li, Aidan G O'Keeffe, Fernando Perez-Garcia, Lucas GS França, Andrew L Ko, Chengyuan Wu, Joshua P Aronson, Brett E Youngerman, Ashwini Sharan, Guy McKhann II, Sebastien Ourselin, and John S Duncan",
     venue: "Epilepsia",
     year: 2019,
   ),
