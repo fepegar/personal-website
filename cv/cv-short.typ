@@ -5,7 +5,6 @@
 
 #cv-header()
 
-#section("Profile")
 #cv-profile-long
 
 #section("Experience")
