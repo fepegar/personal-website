@@ -6,7 +6,7 @@
 #let location = "Cambridge, UK"
 #let email = "fepegar@gmail.com"
 #let scholar-h-index = 18
-#let scholar-citations = "2.9k"
+#let scholar-citations = "3k"
 
 #let profile = "I am a senior research manager at Microsoft AI focusing on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
 
@@ -209,15 +209,15 @@
     year: 2025,
   ),
   (
-    title: "Comprehensive language-image pre-training for 3D medical image understanding",
-    authors: "Tassilo Wald, Ibrahim Ethem Hamamci, Yuan Gao, Sam Bond-Taylor, Harshita Sharma, Maximilian Ilse, Cynthia Lo, Olesya Melnichenko, Anton Schwaighofer, Noel CF Codella, Maria Teodora Wetscherek, Klaus H Maier-Hein, Panagiotis Korfiatis, Valentina Salvatelli, Javier Alvarez-Valle, and Fernando Pérez-García",
-    venue: "arXiv preprint arXiv:2510.15042",
-    year: 2025,
-  ),
-  (
     title: "Challenges for responsible AI design and workflow integration in healthcare: a case study of automatic feeding tube qualification in radiology",
     authors: "Anja Thieme, Abhijith Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
     venue: "ACM Transactions on Computer-Human Interaction",
+    year: 2025,
+  ),
+  (
+    title: "Comprehensive language-image pre-training for 3D medical image understanding",
+    authors: "Tassilo Wald, Ibrahim Ethem Hamamci, Yuan Gao, Sam Bond-Taylor, Harshita Sharma, Maximilian Ilse, Cynthia Lo, Olesya Melnichenko, Anton Schwaighofer, Noel CF Codella, Maria Teodora Wetscherek, Klaus H Maier-Hein, Panagiotis Korfiatis, Valentina Salvatelli, Javier Alvarez-Valle, and Fernando Pérez-García",
+    venue: "arXiv preprint arXiv:2510.15042",
     year: 2025,
   ),
   (
