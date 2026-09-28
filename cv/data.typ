@@ -197,6 +197,18 @@
 
 #let all-publications = (
   (
+    title: "Comprehensive language–image pre-training for 3D medical image understanding",
+    authors: "Tassilo Wald, Ibrahim Ethem Hamamci, Yuan Gao, Sam Bond-Taylor, Harshita Sharma, Maximilian Ilse, Cynthia Lo, Olesya Melnichenko, Anton Schwaighofer, Noel CF Codella, Maria Teodora Wetscherek, Klaus H Maier-Hein, Panagiotis Korfiatis, Valentina Salvatelli, Javier Alvarez-Valle, and Fernando Pérez-García",
+    venue: "",
+    year: 2026,
+  ),
+  (
+    title: "Human-centred design for responsible artificial intelligence in feeding tube assessment on chest radiographs",
+    authors: "Anja Thieme, Abhijith Mohan Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
+    venue: "The Royal College of Radiologists Open",
+    year: 2026,
+  ),
+  (
     title: "InnerEye-HS: a disease-agnostic clinical tool for hippocampal segmentation",
     authors: "Anna Schroder, James Moggridge, Hamza A Salhab, Caroline Micallef, Jiaming Wu, Melissa Bristow, Fernando Pérez-García, Javier Alvarez-Valle, Sjoerd B Vos, Tarek A Yousry, John S Thornton, Frederik Barkhof, John S Duncan, Daniel C Alexander, and Matthew Grech-Sollars",
     venue: "Brain communications",
@@ -212,12 +224,6 @@
     title: "Challenges for responsible AI design and workflow integration in healthcare: a case study of automatic feeding tube qualification in radiology",
     authors: "Anja Thieme, Abhijith Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
     venue: "ACM Transactions on Computer-Human Interaction",
-    year: 2025,
-  ),
-  (
-    title: "Comprehensive language-image pre-training for 3D medical image understanding",
-    authors: "Tassilo Wald, Ibrahim Ethem Hamamci, Yuan Gao, Sam Bond-Taylor, Harshita Sharma, Maximilian Ilse, Cynthia Lo, Olesya Melnichenko, Anton Schwaighofer, Noel CF Codella, Maria Teodora Wetscherek, Klaus H Maier-Hein, Panagiotis Korfiatis, Valentina Salvatelli, Javier Alvarez-Valle, and Fernando Pérez-García",
-    venue: "arXiv preprint arXiv:2510.15042",
     year: 2025,
   ),
   (
@@ -311,7 +317,7 @@
     year: 2023,
   ),
   (
-    title: "MS-CXR-T: Learning to Exploit Temporal Structure for Biomedical Vision-Language Processing",
+    title: "MS-CXR-T: Learning to exploit temporal structure for biomedical vision-language processing",
     authors: "Shruthi Bannur, Stephanie Hyland, Qianchu Liu, Fernando Pérez-García, Max Ilse, Daniel Coelho de Castro, Benedikt Boecking, Harshita Sharma, Kenza Bouzid, Anton Schwaighofer, Maria Teodora Wetscherek, Hannah Richardson, Tristan Naumann, Javier Alvarez Valle, and Ozan Oktay",
     venue: "",
     year: 2023,

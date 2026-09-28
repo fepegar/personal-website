@@ -1,5 +1,25 @@
 [
   {
+    "title": "Comprehensive language–image pre-training for 3D medical image understanding",
+    "abstract": "In the 3D medical image domain, vision–language pre-training is used to create vision–language encoders (VLEs) that can support radiologists by retrieving patients with similar abnormalities, predicting likelihoods of abnormality, or, with downstream adaptation, generating radiological reports. While the methodology holds promise, three challenges limit the capabilities of current 3D VLEs: data scarcity due to privacy concerns, high computational costs resulting from the volumetric nature of the images, and a domain shift between the long reports used for training and the short prompts used during inference for, e.g., zero-shot classification. As a consequence, natural-image VLE recipes do not directly transfer to 3D medical imaging.In this paper, we overcome these challenges by injecting additional supervision via a report generation objective and combining vision–language with vision-only pre-training, allowing …",
+    "year": 2026,
+    "venue": "",
+    "citationCount": 18,
+    "authors": "Tassilo Wald, Ibrahim Ethem Hamamci, Yuan Gao, Sam Bond-Taylor, Harshita Sharma, Maximilian Ilse, Cynthia Lo, Olesya Melnichenko, Anton Schwaighofer, Noel CF Codella, Maria Teodora Wetscherek, Klaus H Maier-Hein, Panagiotis Korfiatis, Valentina Salvatelli, Javier Alvarez-Valle, and Fernando Pérez-García",
+    "url": "https://link.springer.com/chapter/10.1007/978-3-032-37624-4_24",
+    "scholarUrl": "Gc2eg3kAAAAJ:_Qo2XoVZTnwC"
+  },
+  {
+    "title": "Human-centred design for responsible artificial intelligence in feeding tube assessment on chest radiographs",
+    "abstract": "Misplaced nasogastric tubes can cause serious patient harm, including aspiration, pneumothorax, delayed feeding and death. Although recent artificial intelligence (AI) systems have shown that feeding tube position can be robustly assessed on chest radiographs, important gaps remain between technical feasibility and safe clinical integration. This study examined how AI for feeding tube assessment should be designed and introduced within existing care pathways to improve clinical utility, safety and acceptability.A qualitative human-centred study was undertaken using contextual inquiry and semi-structured interviews with 15 stakeholders involved in feeding tube placement, chest radiograph acquisition, image interpretation and feeding decisions. The sample included intensive care clinicians and nurses, stroke clinicians and reporting radiographers. Five prospective AI roles were explored: early misplacement …",
+    "year": 2026,
+    "venue": "The Royal College of Radiologists Open",
+    "citationCount": 0,
+    "authors": "Anja Thieme, Abhijith Mohan Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
+    "url": "https://scholar.google.com/scholar?cluster=12152114008318974100&hl=en&oi=scholarr",
+    "scholarUrl": "Gc2eg3kAAAAJ:bEWYMUwI8FkC"
+  },
+  {
     "title": "InnerEye-HS: a disease-agnostic clinical tool for hippocampal segmentation",
     "abstract": "The hippocampus is subject to atrophy in both Alzheimer’s disease and temporal lobe epilepsy. Hippocampal volumes thus provide an early biomarker for these diseases. However, automated segmentation models typically lack robustness to disease-related changes in the hippocampus.In this work, we present the InnerEye hippocampal segmentation tool (InnerEye-HS). This deep learning tool was trained on MRI scans across the Alzheimer’s disease spectrum, providing exposure to varying hippocampal size and topology. We validate the model against manually segmented hippocampi on both clinical dementia and epilepsy datasets collected in clinical settings and compare our model’s performance to four other freely available tools (Automatic Segmentation of Hippocampal Subfields (ASHS), FreeSurfer, FastSurfer and HIPPOSEG).When compared to other freely available tools, the InnerEye …",
     "year": 2026,
@@ -14,7 +34,7 @@
     "abstract": "Language-supervised pretraining has proven to be a valuable method for extracting semantically meaningful features from images, serving as a foundational element in multimodal systems within the computer vision and medical imaging domains. However, the computed features are limited by the information contained in the text, which is particularly problematic in medical imaging, in which the findings described by radiologists focus on specific observations. This challenge is compounded by the scarcity of paired imaging–text data due to concerns over the leakage of personal health information. In this work, we fundamentally challenge the prevailing reliance on language supervision for learning general-purpose biomedical imaging encoders. We introduce RAD-DINO, a biomedical image encoder pretrained solely on unimodal biomedical imaging data that obtains similar or greater performance than state-of-the …",
     "year": 2025,
     "venue": "Nature Machine Intelligence",
-    "citationCount": 244,
+    "citationCount": 247,
     "authors": "Fernando Pérez-García, Harshita Sharma, Sam Bond-Taylor, Kenza Bouzid, Valentina Salvatelli, Maximilian Ilse, Shruthi Bannur, Daniel C Castro, Anton Schwaighofer, Matthew P Lungren, Maria Teodora Wetscherek, Noel Codella, Stephanie L Hyland, Javier Alvarez-Valle, and Ozan Oktay",
     "url": "https://www.nature.com/articles/s42256-024-00965-w",
     "scholarUrl": "Gc2eg3kAAAAJ:R3hNpaxXUhUC"
@@ -28,16 +48,6 @@
     "authors": "Anja Thieme, Abhijith Rajamohan, Benjamin Cooper, Heather Groombridge, Robert Simister, Barney Wong, Nicholas Woznitza, Mark A Pinnock, Maria T Wetscherek, Cecily Morrison, Hannah Richardson, Fernando Pérez-García, Stephanie L Hyland, Shruthi Bannur, Daniel Coelho de Castro, Kenza Bouzid, Anton Schwaighofer, Mercy P Ranjit, Harshita Sharma, Matthew P Lungren, Ozan Oktay, Javier Alvarez-Valle, Aditya Nori, Steve Harris, and Joseph Jacob",
     "url": "https://dl.acm.org/doi/abs/10.1145/3716500",
     "scholarUrl": "Gc2eg3kAAAAJ:IWHjjKOFINEC"
-  },
-  {
-    "title": "Comprehensive language-image pre-training for 3D medical image understanding",
-    "abstract": "Vision-language pre-training, i.e., aligning images with paired text, is a powerful paradigm to create encoders that can be directly used for tasks such as classification, retrieval, and segmentation. In the 3D medical image domain, these capabilities allow vision-language encoders (VLEs) to support radiologists by retrieving patients with similar abnormalities, predicting likelihoods of abnormality, or, with downstream adaptation, generating radiological reports. While the methodology holds promise, data availability and domain-specific hurdles limit the capabilities of current 3D VLEs. In this paper, we overcome these challenges by injecting additional supervision via a report generation objective and combining vision-language with vision-only pre-training. This allows us to leverage both image-only and paired image-text 3D datasets, increasing the total amount of data to which our model is exposed. Through these additional objectives, paired with best practices of the 3D medical imaging domain, we develop the Comprehensive Language-Image Pre-training (COLIPRI) encoder family. Our COLIPRI encoders achieve state-of-the-art performance in report generation, semantic segmentation, classification probing, and zero-shot classification. The model is available at https://huggingface.co/microsoft/colipri.",
-    "year": 2025,
-    "venue": "arXiv preprint arXiv:2510.15042",
-    "citationCount": 17,
-    "authors": "Tassilo Wald, Ibrahim Ethem Hamamci, Yuan Gao, Sam Bond-Taylor, Harshita Sharma, Maximilian Ilse, Cynthia Lo, Olesya Melnichenko, Anton Schwaighofer, Noel CF Codella, Maria Teodora Wetscherek, Klaus H Maier-Hein, Panagiotis Korfiatis, Valentina Salvatelli, Javier Alvarez-Valle, and Fernando Pérez-García",
-    "url": "https://arxiv.org/abs/2510.15042",
-    "scholarUrl": "Gc2eg3kAAAAJ:_Qo2XoVZTnwC"
   },
   {
     "title": "Data Scaling Laws for Radiology Foundation Models",
@@ -74,7 +84,7 @@
     "abstract": "Radiology reporting is a complex task requiring detailed medical image understanding and precise language generation, for which generative multimodal models offer a promising solution. However, to impact clinical practice, models must achieve a high level of both verifiable performance and utility. We augment the utility of automated report generation by incorporating localisation of individual findings on the image - a task we call grounded report generation - and enhance performance by incorporating realistic reporting context as inputs. We design a novel evaluation framework (RadFact) leveraging the logical inference capabilities of large language models (LLMs) to quantify report correctness and completeness at the level of individual sentences, while supporting the new task of grounded reporting. We develop MAIRA-2, a large radiology-specific multimodal model designed to generate chest X-ray reports with and without grounding. MAIRA-2 achieves state of the art on existing report generation benchmarks and establishes the novel task of grounded report generation.",
     "year": 2024,
     "venue": "arXiv preprint arXiv:2406.04449",
-    "citationCount": 259,
+    "citationCount": 271,
     "authors": "Shruthi Bannur, Kenza Bouzid, Daniel C Castro, Anton Schwaighofer, Sam Bond-Taylor, Maximilian Ilse, Fernando Pérez-García, Valentina Salvatelli, Harshita Sharma, Felix Meissen, Mercy Ranjit, Shaury Srivastav, Julia Gong, Fabian Falck, Ozan Oktay, Anja Thieme, Matthew P Lungren, Maria Teodora Wetscherek, Javier Alvarez-Valle, and Stephanie L Hyland",
     "url": "https://arxiv.org/abs/2406.04449",
     "scholarUrl": "Gc2eg3kAAAAJ:qUcmZB5y_30C"
@@ -84,7 +94,7 @@
     "abstract": "The lack of annotated datasets is a major bottleneck for training new task-specific supervised machine learning models, considering that manual annotation is extremely expensive and time-consuming. To address this problem, we present MONAI Label, a free and open-source framework that facilitates the development of applications based on artificial intelligence (AI) models that aim at reducing the time required to annotate radiology datasets. Through MONAI Label, researchers can develop AI annotation applications focusing on their domain of expertise. It allows researchers to readily deploy their apps as services, which can be made available to clinicians via their preferred user interface. Currently, MONAI Label readily supports locally installed (3D Slicer) and web-based (OHIF) frontends and offers two active learning strategies to facilitate and speed up the training of segmentation algorithms. MONAI Label …",
     "year": 2024,
     "venue": "Medical Image Analysis",
-    "citationCount": 246,
+    "citationCount": 255,
     "authors": "Andres Diaz-Pinto, Sachidanand Alle, Vishwesh Nath, Yucheng Tang, Alvin Ihsani, Muhammad Asad, Fernando Pérez-García, Pritesh Mehta, Wenqi Li, Mona Flores, Holger R Roth, Tom Vercauteren, Daguang Xu, Prerna Dogra, Sebastien Ourselin, Andrew Feng, and M Jorge Cardoso",
     "url": "https://www.sciencedirect.com/science/article/pii/S1361841524001324",
     "scholarUrl": "Gc2eg3kAAAAJ:3fE2CSJIrl8C"
@@ -94,7 +104,7 @@
     "abstract": " Recent advances in AI combine large language models (LLMs) with vision encoders that bring forward unprecedented technical capabilities to leverage for a wide range of healthcare applications. Focusing on the domain of radiology, vision-language models (VLMs) achieve good performance results for tasks such as generating radiology findings based on a patient’s medical image, or answering visual questions (e.g., “Where are the nodules in this chest X-ray?”). However, the clinical utility of potential applications of these capabilities is currently underexplored. We engaged in an iterative, multidisciplinary design process to envision clinically relevant VLM interactions, and co-designed four VLM use concepts: Draft Report Generation, Augmented Report Review, Visual Search and Querying, and Patient Imaging History Highlights. We studied these concepts with 13 radiologists and clinicians who assessed the …",
     "year": 2024,
     "venue": "",
-    "citationCount": 161,
+    "citationCount": 162,
     "authors": "Nur Yildirim, Hannah Richardson, Maria Teodora Wetscherek, Junaid Bajwa, Joseph Jacob, Mark Ames Pinnock, Stephen Harris, Daniel Coelho De Castro, Shruthi Bannur, Stephanie Hyland, Pratik Ghosh, Mercy Ranjit, Kenza Bouzid, Anton Schwaighofer, Fernando Pérez-García, Harshita Sharma, Ozan Oktay, Matthew Lungren, Javier Alvarez-Valle, Aditya Nori, and Anja Thieme",
     "url": "https://dl.acm.org/doi/abs/10.1145/3613904.3642013",
     "scholarUrl": "Gc2eg3kAAAAJ:ZeXyd9-uunAC"
@@ -104,7 +114,7 @@
     "abstract": "Biomedical imaging datasets are often small and biased, meaning that real-world performance of predictive models can be substantially lower than expected from internal testing. This work proposes using generative image editing to simulate dataset shifts and diagnose failure modes of biomedical vision models; this can be used in advance of deployment to assess readiness, potentially reducing cost and patient harm. Existing editing methods can produce undesirable changes, with spurious correlations learned due to the co-occurrence of disease and treatment interventions, limiting practical applicability. To address this, we train a text-to-image diffusion model on multiple chest X-ray datasets and introduce a new editing method, RadEdit, that uses multiple image masks, if present, to constrain changes and ensure consistency in the edited images, minimising bias. We consider three types of dataset shifts …",
     "year": 2024,
     "venue": "",
-    "citationCount": 47,
+    "citationCount": 49,
     "authors": "Fernando Pérez-García, Sam Bond-Taylor, Pedro P Sanchez, Boris van Breugel, Daniel C Castro, Harshita Sharma, Valentina Salvatelli, Maria TA Wetscherek, Hannah Richardson, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, Ozan Oktay, and Maximilian Ilse",
     "url": "https://link.springer.com/chapter/10.1007/978-3-031-73254-6_21",
     "scholarUrl": "Gc2eg3kAAAAJ:9ZlFYXVOiuMC"
@@ -124,7 +134,7 @@
     "abstract": "There is growing interest in applying AI to radiology report generation, particularly for chest X-rays (CXRs). This paper investigates whether incorporating pixel-level information through segmentation masks can improve fine-grained image interpretation of multimodal large language models (MLLMs) for radiology report generation. We introduce MAIRA-Seg, a segmentation-aware MLLM framework designed to utilize semantic segmentation masks alongside CXRs for generating radiology reports. We train expert segmentation models to obtain mask pseudolabels for radiology-specific structures in CXRs. Subsequently, building on the architectures of MAIRA, a CXR-specialised model for report generation, we integrate a trainable segmentation tokens extractor that leverages these mask pseudolabels, and employ mask-aware prompting to generate draft radiology reports. Our experiments on the publicly available MIMIC-CXR dataset show that MAIRA-Seg outperforms non-segmentation baselines. We also investigate set-of-marks prompting with MAIRA and find that MAIRA-Seg consistently demonstrates comparable or superior performance. The results confirm that using segmentation masks enhances the nuanced reasoning of MLLMs, potentially contributing to better clinical outcomes.",
     "year": 2024,
     "venue": "arXiv preprint arXiv:2411.11362",
-    "citationCount": 17,
+    "citationCount": 18,
     "authors": "Harshita Sharma, Valentina Salvatelli, Shaury Srivastav, Kenza Bouzid, Shruthi Bannur, Daniel C Castro, Maximilian Ilse, Sam Bond-Taylor, Mercy Prasanna Ranjit, Fabian Falck, Fernando Pérez-García, Anton Schwaighofer, Hannah Richardson, Maria Teodora Wetscherek, Stephanie L Hyland, and Javier Alvarez-Valle",
     "url": "https://arxiv.org/abs/2411.11362",
     "scholarUrl": "Gc2eg3kAAAAJ:HDshCWvjkbEC"
@@ -144,7 +154,7 @@
     "abstract": "Self-supervised learning in vision-language processing (VLP) exploits semantic alignment between imaging and text modalities. Prior work in biomedical VLP has mostly relied on the alignment of single image and report pairs even though clinical notes commonly refer to prior images. This does not only introduce poor alignment between the modalities but also a missed opportunity to exploit rich self-supervision through existing temporal content in the data. In this work, we explicitly account for prior images and reports when available during both training and fine-tuning. Our approach, named BioViL-T, uses a CNN-Transformer hybrid multi-image encoder trained jointly with a text model. It is designed to be versatile to arising challenges such as pose variations and missing input images across time. The resulting model excels on downstream tasks both in single- and multi-image setups, achieving state-of-the-art …",
     "year": 2023,
     "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
-    "citationCount": 503,
+    "citationCount": 516,
     "authors": "Shruthi Bannur, Stephanie Hyland, Qianchu Liu, Fernando Perez-Garcia, Maximilian Ilse, Daniel C Castro, Benedikt Boecking, Harshita Sharma, Kenza Bouzid, Anja Thieme, Anton Schwaighofer, Maria Wetscherek, Matthew P Lungren, Aditya Nori, Javier Alvarez-Valle, and Ozan Oktay",
     "url": "https://ieeexplore.ieee.org/abstract/document/10204115/",
     "scholarUrl": "Gc2eg3kAAAAJ:dhFuZR0502QC"
@@ -164,7 +174,7 @@
     "abstract": "The recent success of general-domain large language models (LLMs) has significantly changed the natural language processing paradigm towards a unified foundation model across domains and applications. In this paper, we focus on assessing the performance of GPT-4, the most capable LLM so far, on the text-based applications for radiology reports, comparing against state-of-the-art (SOTA) radiology-specific models. Exploring various prompting strategies, we evaluated GPT-4 on a diverse range of common radiology tasks and we found GPT-4 either outperforms or is on par with current SOTA radiology models. With zero-shot prompting, GPT-4 already obtains substantial gains (≈ 10% absolute improvement) over radiology models in temporal sentence similarity classification (accuracy) and natural language inference (F 1). For tasks that require learning dataset-specific style or schema (eg findings summarisation), GPT-4 improves with example-based prompting and matches supervised SOTA. Our extensive error analysis with a board-certified radiologist shows GPT-4 has a sufficient level of radiology knowledge with only occasional errors in complex context that require nuanced domain knowledge. For findings summarisation, GPT-4 outputs are found to be overall comparable with existing manually-written impressions.",
     "year": 2023,
     "venue": "arXiv preprint arXiv:2310.14573",
-    "citationCount": 59,
+    "citationCount": 60,
     "authors": "Qianchu Liu, Stephanie Hyland, Shruthi Bannur, Kenza Bouzid, Daniel C Castro, Maria Teodora Wetscherek, Robert Tinn, Harshita Sharma, Fernando Pérez-García, Anton Schwaighofer, Pranav Rajpurkar, Sameer Tajdin Khanna, Hoifung Poon, Naoto Usuyama, Anja Thieme, Aditya V Nori, Matthew P Lungren, Ozan Oktay, and Javier Alvarez-Valle",
     "url": "https://aclanthology.org/2023.emnlp-main.891/",
     "scholarUrl": "Gc2eg3kAAAAJ:L8Ckcad2t8MC"
@@ -184,14 +194,14 @@
     "abstract": "We introduce a novel Region-based contrastive pretraining for Medical Image Retrieval (RegionMIR) that demonstrates the feasibility of medical image retrieval with similar anatomical regions. RegionMIR addresses two major challenges for medical image retrieval i) standardization of clinically relevant searching criteria (e.g., anatomical, pathology-based), and ii) localization of anatomical area of interests that are semantically meaningful. In this work, we propose an ROI image retrieval image network that retrieves images with similar anatomy by extracting anatomical features (via bounding boxes) and evaluate similarity between pairwise anatomy-categorized features between the query and the database of images using contrastive learning. ROI queries are encoded using a contrastive-pretrained encoder that was fine-tuned for anatomy classification, which generates an anatomical-specific latent space for region-correlated image retrieval. During retrieval, we compare the anatomically encoded query to find similar features within a feature database generated from training samples, and retrieve images with similar regions from training samples. We evaluate our approach on both anatomy classification and image retrieval tasks using the Chest ImaGenome Dataset. Our proposed strategy yields an improvement over state-of-the-art pretraining and co-training strategies, from 92.24 to 94.12 (2.03%) classification accuracy in anatomies. We qualitatively evaluate the image retrieval performance demonstrating generalizability across multiple anatomies with different morphology.",
     "year": 2023,
     "venue": "arXiv preprint arXiv:2305.05598",
-    "citationCount": 10,
+    "citationCount": 11,
     "authors": "Ho Hin Lee, Alberto Santamaria-Pang, Jameson Merkow, Ozan Oktay, Fernando Pérez-García, Javier Alvarez-Valle, and Ivan Tarapov",
     "url": "https://arxiv.org/abs/2305.05598",
     "scholarUrl": "Gc2eg3kAAAAJ:4DMP91E08xMC"
   },
   {
-    "title": "MS-CXR-T: Learning to Exploit Temporal Structure for Biomedical Vision-Language Processing",
-    "abstract": "MS-CXR-T is a multi-modal benchmark dataset for evaluating biomedical vision-language processing (VLP) models on two distinct temporal tasks in radiology: image classification and sentence similarity. The former comprises multi-image frontal chest X-rays with ground-truth labels (N= 1326) across 5 findings, with classes corresponding to 3 states of disease progression for each finding:{'Improving','Stable','Worsening'}, expanding on the Chest ImaGenome progression dataset. The latter quantifies the temporal-semantic similarity of text embeddings extracted from pairs of sentences (N= 361). The pairs can be either paraphrases or contradictions in terms of disease progression. The data for both tasks was manually annotated and reviewed by a board-certified radiologist. The dataset provides researchers an opportunity to evaluate both image and text models on these biomedical temporal tasks and reproduce experiments reported in the corresponding literature.",
+    "title": "MS-CXR-T: Learning to exploit temporal structure for biomedical vision-language processing",
+    "abstract": "Pollard, T., Moody, BE, Lehman, L., Gow, B., Fernandes, C., Xie, C., Johnson, A., Mark, RG, & Heldt, T.(2026). PhysioNet as a global platform for biomedical research. Nature Health. https://doi. org/10.1038/s44360-026-00096-z. Available from: https://rdcu. be/faatM",
     "year": 2023,
     "venue": "",
     "citationCount": 10,
@@ -264,7 +274,7 @@
     "abstract": "Background and Objective. Processing of medical images such as MRI or CT presents different challenges compared to RGB images typically used in computer vision. These include a lack of labels for large datasets, high computational costs, and the need of metadata to describe the physical properties of voxels. Data augmentation is used to artificially increase the size of the training datasets. Training with image subvolumes or patches decreases the need for computational power. Spatial metadata needs to be carefully taken into account in order to ensure a correct alignment and orientation of volumes. We present TorchIO, an open-source Python library to enable efficient loading, preprocessing, augmentation and patch-based sampling of medical images for deep learning. TorchIO follows the style of PyTorch and integrates standard medical image processing libraries to efficiently process images during …",
     "year": 2021,
     "venue": "Computer Methods and Programs in Biomedicine",
-    "citationCount": 866,
+    "citationCount": 865,
     "authors": "Fernando Pérez-García, Rachel Sparks, and Sebastien Ourselin",
     "url": "https://www.sciencedirect.com/science/article/pii/S0169260721003102",
     "scholarUrl": "Gc2eg3kAAAAJ:WF5omc3nYNoC"
@@ -294,7 +304,7 @@
     "abstract": "Background: Epilepsy affects 50 million people worldwide and a third are refractory to medication. If a discrete cerebral focus or network can be identified, neurosurgical resection can be curative. Most excisions are in the temporal-lobe, and are more likely to result in seizure-freedom than extra-temporal resections. However, less than half of patients undergoing surgery become entirely seizure-free. Localizing the epileptogenic-zone and individualized outcome predictions are difficult, requiring detailed evaluations at specialist centers.Methods: We used bespoke natural language processing to text-mine 3,800 electronic health records, from 309 epilepsy surgery patients, evaluated over a decade, of whom 126 remained entirely seizure-free. We investigated the diagnostic performances of machine learning models using set-of-semiology (SoS) with and without hippocampal sclerosis (HS) on MRI as features, using STARD criteria.Findings: Support Vector Classifiers (SVC) and Gradient Boosted (GB) decision trees were the best performing algorithms for temporal-lobe epileptogenic zone localization (cross-validated Matthews correlation coefficient (MCC) SVC 0.73 ± 0.25, balanced accuracy 0.81 ± 0.14, AUC 0.95 ± 0.05). Models that only used seizure semiology were not always better than internal benchmarks. The combination of multimodal features, however, enhanced performance metrics including MCC and normalized mutual information (NMI) compared to either alone (p < 0.0001). This combination of semiology and HS on MRI increased both cross-validated MCC and NMI by over 25% (NMI, SVC SoS: 0.35 ± 0.28 vs. SVC SoS+HS: 0.61 …",
     "year": 2021,
     "venue": "Frontiers in digital health",
-    "citationCount": 20,
+    "citationCount": 21,
     "authors": "Ali Alim-Marvasti, Fernando Pérez-García, Karan Dahele, Gloria Romagnoli, Beate Diehl, Rachel Sparks, Sebastien Ourselin, Matthew J Clarkson, and John S Duncan",
     "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2021.559103/full",
     "scholarUrl": "Gc2eg3kAAAAJ:LkGwnXOMwfcC"
