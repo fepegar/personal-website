@@ -6,7 +6,7 @@
 #let location = "Cambridge, UK"
 #let email = "fepegar@gmail.com"
 #let scholar-h-index = 20
-#let scholar-citations = "3.1k"
+#let scholar-citations = "3.2k"
 
 #let profile = "I am a senior research manager at Microsoft AI focusing on translating multimodal artificial intelligence research into clinical practice. I hold a PhD in Medical Imaging from UCL and King's College London, where I developed data-driven computer vision methods for the treatment of epilepsy, from classification of seizure videos to segmentation of postoperative MRI scans. Prior to this, I was a research engineer at the Paris Brain Institute, where I worked on tools for surgical planning and assessment in Parkinson's disease and epilepsy. I am a strong supporter of open-source software. My framework TorchIO is used as a research tool at numerous hospitals and academic institutions worldwide. When not staring at a computer screen, I can be found playing football or trumpet."
 
